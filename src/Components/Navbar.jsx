@@ -1,44 +1,28 @@
 import React from "react";
-import {Nav,NavItem,NavLink,Navbar,NavbarBrand} from 'reactstrap'
+import { Link } from "react-router-dom";
+import OnlineShop from "./Section/OnlineShop";
 
-const NavBar = () =>{
-    return(
-        <Navbar className="bg-dark ">
-            <NavbarBrand href="/"> 
-                <Nav >
-                    <NavItem>
-                        <NavLink href="/film">Films</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/series">Series</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/cartoon">Cartoons</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/">Action</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/horor">Horror</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/">Romance</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/war">War</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/">Trending</NavLink>
-                    </NavItem>
-                </Nav>
+const Navigation = () => {
+  return (
+    <nav>
+      <ul>
+      <img src="https://freepngimg.com/thumb/online_shopping/12-2-online-shopping-png-clipart.png" alt="" />
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/shop">Shop</Link>
+        </li>
+        <li>
+          <Link to="/about">About Us</Link>
+        </li>
+      </ul>
+      <div className="btn-search">
+        <input type="search" placeholder="search"/>
+        <button type="button" className="navbar-btn"><Link to="/contact" className="btn-a">Sign In</Link></button>
+      </div>
+    </nav>
+  );
+};
 
-
-            
-            </NavbarBrand>
-            <span className="material-symbols-outlined">search</span>
-        </Navbar>
-
-    )
-}
-
-export default NavBar;
+export default Navigation;

@@ -1,9 +1,12 @@
-function Footer(){
-    return(
-        <div className="footer bg-dark text-white">
-            <h1>cinema 2023</h1>
-        </div>
-    )
+import React from 'react';
+
+function Footer() {
+  return (
+    <footer>
+      <p>Copyright © {new Date().getFullYear()}
+        <span> Online Shop</span></p>
+    </footer>
+  );
 }
 
 export default Footer;
