@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function Example() {
@@ -95,7 +96,7 @@ function Example() {
             <Th>Display</Th>
             <Th>Memory</Th>
             <Th>Ram</Th>
-            <Textbtn>Buy</Textbtn>
+            <Link to="/shop"><Textbtn>Buy</Textbtn></Link>
           </Tr>
           <Tr>
             <Td>:Smartfon vivo Y35</Td>

@@ -6,10 +6,12 @@ const Navigation = () => {
   return (
     <nav>
       <ul>
+        <Link to="/">
         <img
           src="https://freepngimg.com/thumb/online_shopping/12-2-online-shopping-png-clipart.png"
           alt=""
         />
+        </Link>
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -22,11 +24,7 @@ const Navigation = () => {
       </ul>
       <div className="btn-search">
         <input type="search" placeholder="search" />
-        <button type="button" className="navbar-btn">
-          <Link to="/contact" className="btn-a">
-            Sign In
-          </Link>
-        </button>
+        <Link to="/contact" className="btn-a"><button type="button" className="navbar-btn">Sign In</button></Link>
       </div>
     </nav>
   )
