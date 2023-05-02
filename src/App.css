@@ -63,6 +63,29 @@ nav img {
     justify-content: space-around;
     width: 12rem;
 }
+table tr th , td{
+    display: flex;
+}
+table tr td{
+    position: relative;
+    top: 0px;
+    left: 100px;
+}
+.text-1{
+    margin-left: 380px;
+    position: relative;
+    animation-name: hotl-text;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+@keyframes hotl-text {
+    0%  {opacity: 0%;}
+    15%  {opacity: 0%;}
+    25% {opacity: 100%;}
+    50% {opacity: 100%;}
+    75% {opacity: 90%;}
+    100% {opacity: 0%;}
+}
 .product-list{
     display: flex;
     flex-wrap: wrap;
@@ -84,13 +107,7 @@ nav img {
     display: flex;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.about{
-    margin: 2rem;
-}
-.about p{
-    width: 60%;
-}
-#map { height: 180px; }
+
 footer{
     display: flex;
     justify-content: center;
