@@ -1,171 +1,53 @@
-import React from "react"
-import Product from "./Product"
+import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import { collection, getDocs } from "firebase/firestore"
+import { db } from "../../config"
+import styled from "styled-components"
 
-const products = [
-  {
-    id: "1",
-    name: "Smartfon vivo Y22, 4/64 GB",
-    image:
-      "https://images.uzum.uz/cf3rk4ivtie1lhbh1620/t_product_540_high.jpg#1682736211056",
-    price: 200,
-  },
-  {
-    id: "2",
-    name: "Yopishmaydigan qoplamali blinchiklar uchun tova",
-    image:
-      "https://images.uzum.uz/cgt86lvg49devoae13j0/t_product_540_high.jpg#1682736639312",
-    price: 1.2,
-  },
-  {
-    id: "3",
-    name: "Aqlli soat Smart Watch WS68 Ultra",
-    image:
-      "https://images.uzum.uz/cgk161r57mg9720ddg70/t_product_540_high.jpg#1682737191417",
-    price: 26.99,
-  },
-  {
-    id: "1",
-    name: "Smartfon vivo Y22, 4/64 GB",
-    image:
-      "https://images.uzum.uz/cf3rk4ivtie1lhbh1620/t_product_540_high.jpg#1682736211056",
-    price: 200,
-  },
-  {
-    id: "2",
-    name: "Yopishmaydigan qoplamali blinchiklar uchun tova",
-    image:
-      "https://images.uzum.uz/cgt86lvg49devoae13j0/t_product_540_high.jpg#1682736639312",
-    price: 1.2,
-  },
-  {
-    id: "3",
-    name: "Aqlli soat Smart Watch WS68 Ultra",
-    image:
-      "https://images.uzum.uz/cgk161r57mg9720ddg70/t_product_540_high.jpg#1682737191417",
-    price: 26.99,
-  },
-  {
-    id: "1",
-    name: "Smartfon vivo Y22, 4/64 GB",
-    image:
-      "https://images.uzum.uz/cf3rk4ivtie1lhbh1620/t_product_540_high.jpg#1682736211056",
-    price: 200,
-  },
-  {
-    id: "2",
-    name: "Yopishmaydigan qoplamali blinchiklar uchun tova",
-    image:
-      "https://images.uzum.uz/cgt86lvg49devoae13j0/t_product_540_high.jpg#1682736639312",
-    price: 1.2,
-  },
-  {
-    id: "3",
-    name: "Aqlli soat Smart Watch WS68 Ultra",
-    image:
-      "https://images.uzum.uz/cgk161r57mg9720ddg70/t_product_540_high.jpg#1682737191417",
-    price: 26.99,
-  },
-  {
-    id: "1",
-    name: "Smartfon vivo Y22, 4/64 GB",
-    image:
-      "https://images.uzum.uz/cf3rk4ivtie1lhbh1620/t_product_540_high.jpg#1682736211056",
-    price: 200,
-  },
-  {
-    id: "2",
-    name: "Yopishmaydigan qoplamali blinchiklar uchun tova",
-    image:
-      "https://images.uzum.uz/cgt86lvg49devoae13j0/t_product_540_high.jpg#1682736639312",
-    price: 1.2,
-  },
-  {
-    id: "3",
-    name: "Aqlli soat Smart Watch WS68 Ultra",
-    image:
-      "https://images.uzum.uz/cgk161r57mg9720ddg70/t_product_540_high.jpg#1682737191417",
-    price: 26.99,
-  },
-  {
-    id: "1",
-    name: "Smartfon vivo Y22, 4/64 GB",
-    image:
-      "https://images.uzum.uz/cf3rk4ivtie1lhbh1620/t_product_540_high.jpg#1682736211056",
-    price: 200,
-  },
-  {
-    id: "2",
-    name: "Yopishmaydigan qoplamali blinchiklar uchun tova",
-    image:
-      "https://images.uzum.uz/cgt86lvg49devoae13j0/t_product_540_high.jpg#1682736639312",
-    price: 1.2,
-  },
-  {
-    id: "3",
-    name: "Aqlli soat Smart Watch WS68 Ultra",
-    image:
-      "https://images.uzum.uz/cgk161r57mg9720ddg70/t_product_540_high.jpg#1682737191417",
-    price: 26.99,
-  },
-  {
-    id: "1",
-    name: "Smartfon vivo Y22, 4/64 GB",
-    image:
-      "https://images.uzum.uz/cf3rk4ivtie1lhbh1620/t_product_540_high.jpg#1682736211056",
-    price: 200,
-  },
-  {
-    id: "2",
-    name: "Yopishmaydigan qoplamali blinchiklar uchun tova",
-    image:
-      "https://images.uzum.uz/cgt86lvg49devoae13j0/t_product_540_high.jpg#1682736639312",
-    price: 1.2,
-  },
-  {
-    id: "3",
-    name: "Aqlli soat Smart Watch WS68 Ultra",
-    image:
-      "https://images.uzum.uz/cgk161r57mg9720ddg70/t_product_540_high.jpg#1682737191417",
-    price: 26.99,
-  },
-  {
-    id: "1",
-    name: "Smartfon vivo Y22, 4/64 GB",
-    image:
-      "https://images.uzum.uz/cf3rk4ivtie1lhbh1620/t_product_540_high.jpg#1682736211056",
-    price: 200,
-  },
-  {
-    id: "2",
-    name: "Yopishmaydigan qoplamali blinchiklar uchun tova",
-    image:
-      "https://images.uzum.uz/cgt86lvg49devoae13j0/t_product_540_high.jpg#1682736639312",
-    price: 1.2,
-  },
-  {
-    id: "3",
-    name: "Aqlli soat Smart Watch WS68 Ultra",
-    image:
-      "https://images.uzum.uz/cgk161r57mg9720ddg70/t_product_540_high.jpg#1682737191417",
-    price: 26.99,
-  },
-]
 
+const Container = styled("div")`
+  display: flex;
+  flex-wrap: wrap;
+`
+const InfoConatiner = styled("div")`
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: auto;
+  margin: 2rem;
+  align-items: center;
+`
 const OnlineShop = () => {
+  const [product, setProduct] = useState([])
+  const products = collection(db, "product")
+
+  useEffect(() => {
+    const getProducts = async () => {
+      const data = await getDocs(products)
+      setProduct(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+    }
+    getProducts()
+  }, [])
+
   return (
-    <div className="online-shop">
-      <h2>Online Shop</h2>
-      <div className="product-list">
-        {products.map((product) => (
-          <Product
-            key={product.id}
-            image={product.image}
-            name={product.name}
-            price={product.price}
-          />
-        ))}
-      </div>
-    </div>
+    <Container>
+      {product.map((d) => (
+        <InfoConatiner>
+          <Link to={`/product/${d.key}`}>
+            <img
+              className="product-img"
+              src="https://images.uzum.uz/cgk161r57mg9720ddg70/t_product_540_high.jpg#1682737191417"
+            />
+            <h3>{d.name}</h3>
+            <p className="product-price">${d.price}</p>
+          </Link>
+
+          <button className="product-btn">
+            <Link to="/addcard">Add to Cart</Link>
+          </button>
+        </InfoConatiner>
+      ))}
+    </Container>
   )
 }
 

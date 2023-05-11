@@ -1,45 +1,43 @@
 import React, { useState } from "react"
+import { auth, provider } from "../../config"
+import { signInWithPopup } from "firebase/auth"
+import styled from "styled-components"
 
-function LoginPage() {
-  const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
+const Login = styled("div")`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 76vh;
 
-  const handleUsernameChange = (event) => setUsername(event.target.value)
-  const handlePasswordChange = (event) => setPassword(event.target.value)
+`
+const H2 = styled("h2")``
+const Loginwithgooglebtn = styled("button")`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 15rem;
+  height: 3rem;
+`
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    console.log(`Username: ${username}\nPassword: ${password}`)
-    // TODO: Send login request to server
+const LoginPage = (setIsAuth) => {
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider).then((result) => {
+      localStorage.setItem("Auth", true)
+      setIsAuth(true)
+    })
   }
-
   return (
-    <form className="login-form" onSubmit={handleSubmit}>
-      <label className="login-label">
-        Username:
-        <input
-          className="login-input"
-          type="text"
-          value={username}
-          onChange={handleUsernameChange}
-        />
-      </label>
-      <br />
-      <label className="login-label">
-        Password:
-        <input
-          className="login-input"
-          type="password"
-          value={password}
-          onChange={handlePasswordChange}
-        />
-      </label>
-      <br />
-      <button className="login-btn" type="submit">
-        Sign In
-      </button>
-    </form>
+    <Login>
+      <H2>Sign in with Google</H2>
+      <Loginwithgooglebtn onClick={signInWithGoogle}>
+        Sign in With Google
+      </Loginwithgooglebtn>
+    </Login>
   )
 }
 
-export default LoginPage;
+export default LoginPage
