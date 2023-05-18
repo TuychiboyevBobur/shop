@@ -4,7 +4,6 @@ import { collection, getDocs } from "firebase/firestore"
 import { db } from "../../config"
 import styled from "styled-components"
 
-
 const Container = styled("div")`
   display: flex;
   flex-wrap: wrap;
@@ -12,10 +11,32 @@ const Container = styled("div")`
 const InfoConatiner = styled("div")`
   display: flex;
   flex-direction: column;
-  width: 200px;
-  height: auto;
+  width: 13rem;
+  height: 30rem;
   margin: 2rem;
   align-items: center;
+`
+const Price = styled("p")`
+  display: flex;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+`
+const ShopImg = styled("img")`
+  width: 13rem;
+  height: 17rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10%;
+  transition: all 0.3s;
+  :hover{
+    transform: scale(1.1);
+  }
+`
+const ProductBtn = styled("button")`
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: black;
+  border: none;
+  color: rgb(16, 116, 224);
 `
 const OnlineShop = () => {
   const [product, setProduct] = useState([])
@@ -34,21 +55,18 @@ const OnlineShop = () => {
       {product.map((d) => (
         <InfoConatiner>
           <Link to={`/product/${d.key}`}>
-            <img
-              className="product-img"
-              src="https://images.uzum.uz/cgk161r57mg9720ddg70/t_product_540_high.jpg#1682737191417"
-            />
+            <ShopImg src="https://images.uzum.uz/cgk161r57mg9720ddg70/t_product_540_high.jpg#1682737191417" />
             <h3>{d.name}</h3>
-            <p className="product-price">${d.price}</p>
+            <Price>${d.price}</Price>
           </Link>
 
-          <button className="product-btn">
-            <Link to="/addcard">Add to Cart</Link>
-          </button>
+          <Link to="/addcard">
+            <ProductBtn className="product-btn">Add to Cart</ProductBtn>
+          </Link>
         </InfoConatiner>
       ))}
     </Container>
   )
 }
 
-export default OnlineShop
+export default OnlineShop;

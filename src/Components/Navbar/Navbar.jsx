@@ -1,41 +1,89 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import styled from "styled-components"
 
+const Navbar = styled("nav")`
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: black;
+`
+const Ul = styled("ul")`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`
+const Li = styled("li")`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+`
+const Search = styled("div")`
+  display: flex;
+  align-self: center;
+  display: flex;
+  gap: 1rem;
+`
+const Input = styled("input")`
+  width: 15rem;
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(16, 116, 224);
+  color: white;
+`
+const Btn = styled("button")`
+  height: 3rem;
+  border: none;
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 1rem;
+  border-radius: 10%;
+  background-color: rgb(16, 116, 224);
+  :hover  {
+    background-color: rgb(16, 116, 224);
+  }
+`
+const NavImg = styled("img")`
+  width: 4rem;
+  height: 3rem;
+`
 const Navigation = () => {
   return (
-    <nav>
-      <ul>
+    <Navbar>
+      <Ul>
         <Link to="/">
-          <img
+          <NavImg
             src="https://freepngimg.com/thumb/online_shopping/12-2-online-shopping-png-clipart.png"
             alt=""
           />
         </Link>
-        <li>
+        <Li>
           <Link to="/" className="nav-link">
             Home
           </Link>
-        </li>
-        <li>
+        </Li>
+        <Li>
           <Link to="/shop" className="nav-link">
             Shop
           </Link>
-        </li>
-        <li>
+        </Li>
+        <Li>
           <Link to="/about" className="nav-link">
             About Us
           </Link>
-        </li>
-      </ul>
-      <div className="btn-search">
-        <input type="search" placeholder="search" />
+        </Li>
+      </Ul>
+      <Search>
+        <Input type="search" placeholder="search" />
         <Link to="/contact" className="btn-a">
-          <button type="button" className="navbar-btn">
+          <Btn type="button" className="navbar-btn">
             Sign In
-          </button>
+          </Btn>
         </Link>
-      </div>
-    </nav>
+      </Search>
+    </Navbar>
   )
 }
 
