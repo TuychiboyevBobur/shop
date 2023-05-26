@@ -67,6 +67,17 @@ const Container = styled("div")`
 `
 const Cardno = styled("div")``
 const Emailcontainer = styled("div")``
+const PayBtn = styled("button")`
+  width: 25rem;
+  padding: 0.5rem;
+  background-color: rgb(16, 116, 224);
+  border-radius: 10px;
+  border: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+`
 const AddCard = () => {
   return (
     <Container>
@@ -99,10 +110,15 @@ const AddCard = () => {
       </Sellcontainer>
       <Email>
         <Emailcontainer>
-        <H4>E-mail</H4>
-        <EmailInput placeholder="@gmail.com" type="email" required></EmailInput>
+          <H4>E-mail</H4>
+          <EmailInput
+            placeholder="@gmail.com"
+            type="email"
+            required
+          ></EmailInput>
         </Emailcontainer>
       </Email>
+      <PayBtn>Buy</PayBtn>
     </Container>
   )
 }

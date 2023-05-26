@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { collection, getDocs } from "firebase/firestore"
-import { db } from "../../config"
+import { db } from "../../../config"
 import styled from "styled-components"
 
 const Container = styled("div")`
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  margin: 2rem;
 `
 const InfoConatiner = styled("div")`
   display: flex;
@@ -27,16 +30,26 @@ const ShopImg = styled("img")`
   overflow: hidden;
   border-radius: 10%;
   transition: all 0.3s;
-  :hover{
+  :hover {
     transform: scale(1.1);
   }
 `
 const ProductBtn = styled("button")`
   padding: 0.5rem;
   border-radius: 10px;
-  background-color: black;
+  background-color: #d7d3d3;
   border: none;
-  color: rgb(16, 116, 224);
+  color: #000000;
+  width: 13rem;
+  :hover {
+    background-color: #919191;
+  }
+`
+const ShopImg2 = styled("img")`
+  margin-top: 2rem;
+  border-radius: 2rem;
+  width: 90%;
+  height: auto;
 `
 const OnlineShop = () => {
   const [product, setProduct] = useState([])
@@ -52,16 +65,19 @@ const OnlineShop = () => {
 
   return (
     <Container>
+      <ShopImg2 src="https://images.uzum.uz/chljbrbltlh4bk4k2vdg/main_page_banner.jpg" />
       {product.map((d) => (
         <InfoConatiner>
-          <Link to={`/product/${d.key}`}>
-            <ShopImg src="https://images.uzum.uz/cgk161r57mg9720ddg70/t_product_540_high.jpg#1682737191417" />
+          <Link to={`/product/${d.key}`} className="shop-text">
+            <ShopImg src={d.image} />
             <h3>{d.name}</h3>
             <Price>${d.price}</Price>
           </Link>
 
           <Link to="/addcard">
-            <ProductBtn className="product-btn">Add to Cart</ProductBtn>
+            <ProductBtn className="product-btn">
+              <h4>Add to Cart</h4>
+            </ProductBtn>
           </Link>
         </InfoConatiner>
       ))}
@@ -69,4 +85,4 @@ const OnlineShop = () => {
   )
 }
 
-export default OnlineShop;
+export default OnlineShop

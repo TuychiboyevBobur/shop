@@ -115,6 +115,18 @@ function Example() {
     font-family: "Times New Roman", Times, serif;
   `
   const Home = styled("div")``
+  const RasmDiv = styled("div")`
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+  `
+  const Rasm = styled("img")`
+    border-radius: 1rem;
+    transition: all 1s;
+    :hover{
+      transform: scale(1.01);
+    }
+  `
   return (
     <Home>
       <Animation>
@@ -160,6 +172,9 @@ function Example() {
           </Link>
         </ImgSport>
       </Sports>
+      <RasmDiv>
+        <Rasm src="https://images.uzum.uz/cetufm0l08k0o9qhg7d0/main_page_banner.jpg" />
+      </RasmDiv>
     </Home>
   )
 }

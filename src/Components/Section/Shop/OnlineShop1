@@ -1,0 +1,25 @@
+import React from "react";
+import OnlineShop from "./OnlineShop";
+
+
+
+const Online = () => {
+  return (
+    <div className="online-shop">
+      <h2>Online Shop</h2>
+      <div className="product-list">
+        {mahsulotlar.map(mahsulot => (
+          <OnlineShop
+            key={mahsulot.id}
+            name={mahsulot.name}
+            description={mahsulot.description}
+            image={mahsulot.image}
+            price={mahsulot.price}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default OnlineShop1;

@@ -1,12 +1,18 @@
-a {
-  color: rgb(16, 116, 224);
+.nav-link {
+  color: #d7d3d3;
   text-decoration: none;
   list-style: none;
 }
 
 .nav-link:hover {
-  color: rgb(96, 158, 224);
+  color: #989797;
+  transform: scale(1.02);
 }
 .btn-a {
   color: white;
+}
+.shop-text {
+  color: #000000;
+  text-decoration: none;
+  list-style: none;
 }

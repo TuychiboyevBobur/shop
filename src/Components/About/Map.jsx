@@ -17,9 +17,7 @@ const Map = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={position}>
-        <Popup>
-          Impactt coddy camp
-        </Popup>
+        <Popup>Impactt coddy camp</Popup>
       </Marker>
     </MapContent>
   )

@@ -30,19 +30,19 @@ const Input = styled("input")`
   height: 3rem;
   border: none;
   border-radius: 10px;
-  background-color: rgb(16, 116, 224);
+  background-color: #d7d3d3;
   color: white;
 `
 const Btn = styled("button")`
   height: 3rem;
   border: none;
-  color: white;
+  color: #787777;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   padding: 1rem;
   border-radius: 10%;
-  background-color: rgb(16, 116, 224);
-  :hover  {
-    background-color: rgb(16, 116, 224);
+  background-color: #d7d3d3;
+  :hover {
+    background-color: #afafaf;
   }
 `
 const NavImg = styled("img")`
