@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 
@@ -19,20 +19,7 @@ const Li = styled("li")`
   gap: 1rem;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 `
-const Search = styled("div")`
-  display: flex;
-  align-self: center;
-  display: flex;
-  gap: 1rem;
-`
-const Input = styled("input")`
-  width: 15rem;
-  height: 3rem;
-  border: none;
-  border-radius: 10px;
-  background-color: #d7d3d3;
-  color: white;
-`
+
 const Btn = styled("button")`
   height: 3rem;
   border: none;
@@ -49,7 +36,44 @@ const NavImg = styled("img")`
   width: 4rem;
   height: 3rem;
 `
+const Input = styled("input")`
+  width: 15rem;
+  height: 3rem;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  background-color: #d7d3d3;
+  color: white;
+  transition: 1s ease-in-out;
+  :focus {
+    width: 35rem;
+  }
+`
+const SearchBtn = styled("button")`
+  width: auto;
+  height: 3.35rem;
+  background-color: #d7d3d3;
+  color: gray;
+  border-radius: 0 10px 10px 0;
+`
+const Search = styled("div")`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+`
+const Form = styled("form")`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 const Navigation = () => {
+  const [value, setValue] = useState("")
+  const onChange = (event) => {
+    setValue(event.target.value)
+  }
+  const onSearch = (searchTerm) => {
+    console.log("search ", searchTerm)
+  }
   return (
     <Navbar>
       <Ul>
@@ -76,7 +100,17 @@ const Navigation = () => {
         </Li>
       </Ul>
       <Search>
-        <Input type="search" placeholder="search" />
+        <Form>
+          <Input
+            type="text"
+            value={value}
+            onChange={onChange}
+            placeholder="Search..."
+          />
+          <Link to="/">
+            <SearchBtn onClick={() => onSearch(value)}>Search</SearchBtn>
+          </Link>
+        </Form>
         <Link to="/contact" className="btn-a">
           <Btn type="button" className="navbar-btn">
             Sign In

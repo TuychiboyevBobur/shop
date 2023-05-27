@@ -14,8 +14,9 @@ const Container = styled("div")`
 const InfoConatiner = styled("div")`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 13rem;
-  height: 30rem;
+  height: 32.3rem;
   margin: 2rem;
   align-items: center;
 `
