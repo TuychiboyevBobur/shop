@@ -77,7 +77,7 @@ const OnlineShop = () => {
 
           <Link to="/addcard">
             <ProductBtn className="product-btn">
-              <h4>Add to Cart</h4>
+              <h4>Savatchaga qo'shish</h4>
             </ProductBtn>
           </Link>
         </InfoConatiner>

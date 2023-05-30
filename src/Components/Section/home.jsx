@@ -133,12 +133,12 @@ function Example() {
         <AnimationImg src="https://images.uzum.uz/cf3rnigl08k0o9qhvk80/original.jpg" />
         <Tabletext class="text-white">
           <Tr>
-            <Th>Name</Th>
-            <Th>Display</Th>
-            <Th>Memory</Th>
+            <Th>Nomi</Th>
+            <Th>Ekran</Th>
+            <Th>Xotira</Th>
             <Th>Ram</Th>
             <Link to="/shop">
-              <Textbtn>Buy</Textbtn>
+              <Textbtn>Sotib olish</Textbtn>
             </Link>
           </Tr>
           <Tr>
@@ -150,7 +150,7 @@ function Example() {
         </Tabletext>
       </Animation>
       <Sports>
-        <H1>Sport aksesuars</H1>
+        <H1>Sport aksesuarlar</H1>
         <ImgSport>
           <Link to="shop">
             <SportsImg src="https://images.uzum.uz/cgjt3mj57mg9720dcglg/original.jpg" />

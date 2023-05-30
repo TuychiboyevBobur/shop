@@ -8,7 +8,7 @@ const Div = styled("div")`
 const Details = () => {
     return (
       <Div>
-        <h1>Not restult</h1>
+        <h1>Ma'lumot topilmadi</h1>
       </Div>
     )
 }

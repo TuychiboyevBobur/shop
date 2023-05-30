@@ -17,38 +17,42 @@ function About() {
   return (
     <Container className="about">
       <LeftContent>
-        <h1>About us</h1>
+        <h1>Biz haqimizda</h1>
         <p>
-          Online shopping is a form of electronic commerce which allows
-          consumers to directly buy goods or services from a seller over the
-          Internet using a web browser or a mobile app. <br /> Consumers find a
-          product of interest by visiting the website of the retailer directly
-          or by searching among alternative vendors using a shopping search
-          engine, which displays the same product's availability and pricing at
-          different e-retailers. <br /> As of 2020, customers can shop online
-          using a range of different computers and devices, including desktop
-          computers, laptops, tablet computers and smartphones. <br /> An online
-          shop evokes the physical analogy of buying products or services at a
-          regular "bricks-and-mortar" retailer or shopping center; the process
-          is called business-to-consumer (B2C) online shopping. <br /> When an
-          online store is set up to enable businesses to buy from another
-          businesses, the process is called business-to-business (B2B) online
-          shopping. <br /> A typical online store enables the customer to browse
-          the firm's range of products and services, view photos or images of
-          the products, along with information about the product specifications,
-          features and prices. Online stores usually enable shoppers to use
-          "search" features to find specific models, brands or items. <br />{" "}
-          Online customers must have access to the Internet and a valid method
-          of payment in order to complete a transaction, such as a credit card,
-          an Interac-enabled debit card, or a service such as PayPal. For
-          physical products (e.g., paperback books or clothes), the e-tailer
-          ships the products to the customer; for digital products, such as
-          digital audio files of songs or software, the e-tailer usually sends
-          the file to the customer over the Internet. <br /> The largest of
-          these online retailing corporations are Alibaba, Amazon.com, and eBay.
+          Onlayn xarid qilish imkonini beradigan elektron tijorat shaklidir
+          iste'molchilar tovar yoki xizmatlarni sotuvchidan to'g'ridan-to'g'ri
+          sotib olishlari Veb-brauzer yoki mobil ilova yordamida Internet.
+          <br /> Iste'molchilar a to'g'ridan-to'g'ri sotuvchining veb-saytiga
+          tashrif buyurib, qiziqish mahsuloti yoki xarid qidiruvidan foydalanib,
+          muqobil sotuvchilarni qidirish orqali bir xil mahsulotning mavjudligi
+          va narxini ko'rsatadigan vosita turli xil elektron sotuvchilar. <br />
+          2020 yildan boshlab mijozlar onlayn xarid qilishlari mumkin turli xil
+          kompyuterlar va qurilmalardan, jumladan, ish stolidan foydalanish
+          kompyuterlar, noutbuklar, planshet kompyuterlar va smartfonlar. <br />
+          Onlayn do'kon mahsulot yoki xizmatlarni sotib olishning jismoniy
+          o'xshashligini keltirib chiqaradi muntazam "g'isht va ohak" sotuvchisi
+          yoki savdo markazi; jarayon biznesdan iste'molchiga (B2C) onlayn xarid
+          qilish deb ataladi. <br /> Qachon an onlayn-do'kon korxonalarga
+          boshqasidan xarid qilish imkonini berish uchun tashkil etilgan biznes
+          uchun bu jarayon biznesdan biznesga (B2B) onlayn deb ataladi xarid
+          qilish. <br /> Oddiy onlayn-do'kon mijozga ko'rish imkonini beradi
+          firmaning mahsulot va xizmatlari assortimenti, fotosuratlari yoki
+          rasmlarini ko'ring mahsulotlar, mahsulot xususiyatlari haqida ma'lumot
+          bilan birga, xususiyatlari va narxlari. Onlayn do'konlar odatda
+          xaridorlarga foydalanishga imkon beradi Muayyan modellar, brendlar
+          yoki narsalarni topish uchun "qidirish" xususiyatlari. <br /> Onlayn
+          mijozlar Internetga kirishlari va tegishli usulga ega bo'lishi kerak
+          kredit karta kabi tranzaktsiyani bajarish uchun to'lov Interac-ni
+          yoqadigan debet karta yoki PayPal kabi xizmat. Uchun jismoniy
+          mahsulotlar (masalan, qog'ozli kitoblar yoki kiyim-kechak), elektron
+          sotuvchi mahsulotni xaridorga jo'natadi; kabi raqamli mahsulotlar
+          uchun qo'shiqlar yoki dasturiy ta'minotning raqamli audio fayllari,
+          e-tailer odatda yuboradi faylni mijozga Internet orqali yuborish.
+          <br /> Eng kattasi bu onlayn chakana korporatsiyalar - Alibaba,
+          Amazon.com va eBay.
         </p>
       </LeftContent>
-        <Map />
+      <Map />
     </Container>
   )
 }

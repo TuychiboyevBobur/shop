@@ -34,10 +34,10 @@ const LoginPage = (setIsAuth) => {
   }
   return (
     <Login>
-      <H2>Sign in with Google</H2>
+      <H2>Google bilan kirish</H2>
       <Loginwithgooglebtn onClick={signInWithGoogle}>
         <GoogleImg src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" />
-        Sign in With Google
+        Google bilan kirish
       </Loginwithgooglebtn>
     </Login>
   )

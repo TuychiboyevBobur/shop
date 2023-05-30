@@ -6,7 +6,7 @@ const Navbar = styled("nav")`
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  background-color: black;
+  background-color: #252323;
 `
 const Ul = styled("ul")`
   display: flex;
@@ -79,23 +79,23 @@ const Navigation = () => {
       <Ul>
         <Link to="/">
           <NavImg
-            src="https://freepngimg.com/thumb/online_shopping/12-2-online-shopping-png-clipart.png"
+            src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/842730/shopping-cart-clipart-md.png"
             alt=""
           />
         </Link>
         <Li>
           <Link to="/" className="nav-link">
-            Home
+            Menu
           </Link>
         </Li>
         <Li>
           <Link to="/shop" className="nav-link">
-            Shop
+            Do'kon
           </Link>
         </Li>
         <Li>
           <Link to="/about" className="nav-link">
-            About Us
+            Biz haqimizda
           </Link>
         </Li>
       </Ul>
@@ -105,15 +105,15 @@ const Navigation = () => {
             type="text"
             value={value}
             onChange={onChange}
-            placeholder="Search..."
+            placeholder="Qidirish..."
           />
           <Link to="/">
-            <SearchBtn onClick={() => onSearch(value)}>Search</SearchBtn>
+            <SearchBtn onClick={() => onSearch(value)}>Qidirish</SearchBtn>
           </Link>
         </Form>
         <Link to="/contact" className="btn-a">
           <Btn type="button" className="navbar-btn">
-            Sign In
+            Kirish
           </Btn>
         </Link>
       </Search>

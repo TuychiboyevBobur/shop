@@ -7,7 +7,7 @@ const FooterCss = styled("footer")`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: black;
+  background-color: #171616;
   color: white;
 `
 const MySlef = styled("div")`
@@ -71,10 +71,10 @@ function Footer() {
       <MySlef>
         <H2>
           <Link to="/about" className="nav-link">
-            <h2>About</h2>
+            <h2>Biz haqimizda</h2>
           </Link>
-          My Email: <Span>toychiboyevbobur16@gmail.com</Span> <br /> <br />
-          Produced by <Span> Bobur</Span> in 2023 <br /> <br /> My phone:{" "}
+          Mening Emailim: <Span>toychiboyevbobur16@gmail.com</Span> <br /> <br />
+          <Span> Bobur</Span> tomonidan 2023-yil yasaldi. <br /> <br /> Mening telefon nomerim:{" "}
           <Span>+998 (99) 365 39 55</Span>
           <br />
         </H2>

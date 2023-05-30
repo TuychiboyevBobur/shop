@@ -81,29 +81,29 @@ const PayBtn = styled("button")`
 const AddCard = () => {
   return (
     <Container>
-      <H1>Card info</H1>
+      <H1>Karta ma'lumotlari</H1>
       <Sellcontainer>
         <Cardno>
-          <H4>Card No.</H4>
+          <H4>Karta nomer</H4>
           <Card placeholder="Fill the blank" type="number" required></Card>
         </Cardno>
         <DateSvc>
           <Date>
-            <H4>Expiration date</H4>
+            <H4>Tugash muddati</H4>
             <CardDate placeholder="MM/YY" type="number" required></CardDate>
           </Date>
           <Svc>
-            <H4>Security Code</H4>
+            <H4>Xavfsizlik kodi</H4>
             <CardSvc placeholder="Fill the blank" required></CardSvc>
           </Svc>
         </DateSvc>
         <Name>
           <First>
-            <H4>First Name</H4>
+            <H4>Ism</H4>
             <FirstName placeholder="First Name" required></FirstName>
           </First>
           <Last>
-            <H4>Last Name</H4>
+            <H4>Familya</H4>
             <LastName placeholder="Last Name" required></LastName>
           </Last>
         </Name>
@@ -118,7 +118,7 @@ const AddCard = () => {
           ></EmailInput>
         </Emailcontainer>
       </Email>
-      <PayBtn>Buy</PayBtn>
+      <PayBtn>Sotib olish</PayBtn>
     </Container>
   )
 }
