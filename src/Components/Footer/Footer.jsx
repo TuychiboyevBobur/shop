@@ -15,8 +15,9 @@ const MySlef = styled("div")`
   gap: 10rem;
 `
 const H2 = styled("h2")`
-font-size: 1.2rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 `
 const Mychanel = styled("div")`
   margin-top: 1rem;
@@ -47,20 +48,20 @@ const YouTube = styled("div")`
   gap: 1rem;
 `
 const InstagramImg = styled("img")`
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
 `
 const TikTokImg = styled("img")`
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
 `
 const TelegramImg = styled("img")`
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
 `
 const YouTubeImg = styled("img")`
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
 `
 const Span = styled("span")`
   color: #007ee5;
@@ -71,11 +72,13 @@ function Footer() {
       <MySlef>
         <H2>
           <Link to="/about" className="nav-link">
-            <h2>Biz haqimizda</h2>
+            <h4>Biz haqimizda</h4>
           </Link>
-          Mening Emailim: <Span>toychiboyevbobur16@gmail.com</Span> <br /> <br />
-          <Span> Bobur</Span> tomonidan 2023-yil yasaldi. <br /> <br /> Mening telefon nomerim:{" "}
-          <Span>+998 (99) 365 39 55</Span>
+          <br />
+          Mening Emailim: <Span>toychiboyevbobur16@gmail.com</Span> <br /><br />
+          <br />
+          <Span> Bobur</Span> tomonidan 2023-yil yasaldi. <br /><br /><br /> Mening
+          telefon nomerim: <Span>+998 (99) 365 39 55</Span>
           <br />
         </H2>
         <Mychanel>
